@@ -3,11 +3,12 @@ import { useAuth } from '@/contexts/AuthContext';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import {
-  LayoutDashboard, Users, CreditCard, Rocket, FileText, Settings, LogOut, Globe, Menu, X,
+  LayoutDashboard, Users, CreditCard, Rocket, FileText, Settings, LogOut, Menu, X,
   Shield, BarChart3, Upload, Lock,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
+import chaiLogo from '@/assets/chaiclick-logo.png';
 import { mockPendingApprovals } from '@/lib/mock-data';
 
 interface NavItem {
@@ -56,8 +57,8 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
       )}>
         <div className="flex h-14 items-center justify-between border-b border-border px-4">
           <Link to="/" className="flex items-center gap-2 font-semibold text-foreground">
-            <Globe className="h-5 w-5" />
-            <span className="text-sm tracking-tight">WaaS-Flow</span>
+            <img src={chaiLogo} alt="ChaiClick" className="h-5 w-5" />
+            <span className="text-sm tracking-tight">ChaiClick</span>
           </Link>
           <button onClick={() => setMobileOpen(false)} className="lg:hidden">
             <X className="h-5 w-5 text-muted-foreground" />
