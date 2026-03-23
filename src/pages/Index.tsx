@@ -4,8 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
-  Globe, Server, Shield, MessageCircle, Headphones, Zap, Check, ArrowRight, Star,
+  Server, Shield, MessageCircle, Headphones, Zap, Check, ArrowRight, Star, Globe,
 } from 'lucide-react';
+import { ChaiClickLogo } from '@/components/ChaiClickLogo';
+import { PoweredByBadge } from '@/components/PoweredByBadge';
 
 const features = [
   { icon: Server, title: 'Fast VPS Hosting', desc: 'Your site runs on a dedicated VPS with blazing-fast load times and 99.9% uptime.' },
