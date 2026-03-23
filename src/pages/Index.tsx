@@ -2,35 +2,59 @@ import { Link } from 'react-router-dom';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import {
-  Globe, Server, Shield, MessageCircle, Headphones, Zap, Check, ArrowRight, Star } from
-'lucide-react';
+  Globe, Server, Shield, MessageCircle, Headphones, Zap, Check, ArrowRight, Star,
+} from 'lucide-react';
 
 const features = [
-{ icon: Server, title: 'Fast VPS Hosting', desc: 'Your site runs on a dedicated VPS with blazing-fast load times and 99.9% uptime.' },
-{ icon: Shield, title: 'Free SSL Certificate', desc: 'Every site gets automatic HTTPS encryption — no extra cost, no manual setup.' },
-{ icon: MessageCircle, title: 'WhatsApp Integration', desc: 'Built-in WhatsApp chat button so your customers can reach you instantly.' },
-{ icon: Headphones, title: '24h Support', desc: 'Our team is always available to handle updates, fixes, and any questions you have.' },
-{ icon: Zap, title: 'Lightning Deploys', desc: 'Changes go live within hours. We handle the entire deployment pipeline for you.' },
-{ icon: Globe, title: 'Custom Domain', desc: 'Connect your own domain with DNS management and automatic SSL provisioning.' }];
+  { icon: Server, title: 'Fast VPS Hosting', desc: 'Your site runs on a dedicated VPS with blazing-fast load times and 99.9% uptime.' },
+  { icon: Shield, title: 'Free SSL Certificate', desc: 'Every site gets automatic HTTPS encryption — no extra cost, no manual setup.' },
+  { icon: MessageCircle, title: 'WhatsApp Integration', desc: 'Built-in WhatsApp chat button so your customers can reach you instantly.' },
+  { icon: Headphones, title: '24h Support', desc: 'Our team is always available to handle updates, fixes, and any questions you have.' },
+  { icon: Zap, title: 'Lightning Deploys', desc: 'Changes go live within hours. We handle the entire deployment pipeline for you.' },
+  { icon: Globe, title: 'Custom Domain', desc: 'Connect your own domain with DNS management and automatic SSL provisioning.' },
+];
 
+const allFeatures = [
+  'WhatsApp Chat Button',
+  'Free SSL & VPS Hosting',
+  'Lite Analytics Dashboard',
+  'Custom Domain Setup',
+  '24h Priority Support',
+];
 
 const plans = [
-{
-  name: 'Starter',
-  price: '1,500',
-  desc: 'Perfect for small shops & local businesses',
-  features: ['Single-page website', 'WhatsApp button', 'Free SSL & hosting', 'Monthly content update', '24h support'],
-  popular: false
-},
-{
-  name: 'Growth',
-  price: '3,000',
-  desc: 'For businesses that need more power',
-  features: ['Multi-page website', 'WhatsApp + contact form', 'Free SSL & hosting', 'Weekly content updates', 'Priority 24h support', 'Lite analytics dashboard', 'Custom domain setup'],
-  popular: true
-}];
+  {
+    name: 'Starter',
+    type: 'Single-Page Static Website',
+    price: '560',
+    daily: '20',
+    anchor: 'Less than the cost of a daily Chai & Vada ☕',
+    highlight: 'Perfect for portfolios and simple menus.',
+    badge: null,
+    extra: null,
+    popular: false,
+  },
+  {
+    name: 'Growth',
+    type: 'Full Dynamic Webapp',
+    price: '840',
+    daily: '30',
+    anchor: 'Less than the cost of a Special Tea & Snack ☕🍪',
+    highlight: null,
+    badge: 'Best Seller',
+    extra: 'Includes Private Admin Dashboard: Update your prices, photos, and services instantly from your phone.',
+    popular: true,
+  },
+];
 
+function whatsappLink(planName: string, price: string) {
+  const msg = encodeURIComponent(
+    `Hi! I want to start my business website on the ${planName} plan for ₹${price}. Please help me set it up!`
+  );
+  return `https://wa.me/919999999999?text=${msg}`;
+}
 
 export default function LandingPage() {
   return (
@@ -62,8 +86,8 @@ export default function LandingPage() {
               <Star className="h-3 w-3 text-warning" />
               Trusted by 50+ Indian businesses
             </div>
-            <h1 className="text-4xl tracking-tight md:text-6xl lg:text-7xl font-extrabold">
-
+            <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
+              We Build, Host & Manage Your Website
               <span className="block text-muted-foreground">for a Monthly Subscription</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
@@ -71,10 +95,10 @@ export default function LandingPage() {
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Button asChild size="lg" className="gap-2">
-                <Link to="/login">
-                  Start for ₹1,500/mo
+                <a href="#pricing">
+                  Start for ₹560/28 days
                   <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <a href="#pricing">View Plans</a>
@@ -94,8 +118,8 @@ export default function LandingPage() {
             <p className="mt-2 text-muted-foreground">A complete website solution — from hosting to support.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((f) =>
-            <Card key={f.title} className="group border-border bg-card transition-shadow hover:shadow-md">
+            {features.map(f => (
+              <Card key={f.title} className="group border-border bg-card transition-shadow hover:shadow-md">
                 <CardHeader className="pb-3">
                   <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-md bg-primary/10">
                     <f.icon className="h-4 w-4 text-primary" />
@@ -106,7 +130,7 @@ export default function LandingPage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
                 </CardContent>
               </Card>
-            )}
+            ))}
           </div>
         </div>
       </section>
@@ -115,42 +139,61 @@ export default function LandingPage() {
       <section id="pricing" className="border-t border-border">
         <div className="mx-auto max-w-6xl px-4 py-20">
           <div className="mb-12 text-center">
-            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Simple, Transparent Pricing</h2>
-            <p className="mt-2 text-muted-foreground">No hidden fees. Cancel anytime.</p>
+            <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Simple 28-Day Pricing</h2>
+            <p className="mt-2 text-muted-foreground">No contracts. No commitments. Pay every 28 days.</p>
           </div>
           <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
-            {plans.map((plan) =>
-            <Card key={plan.name} className={`relative flex flex-col border-border ${plan.popular ? 'ring-2 ring-primary shadow-lg' : ''}`}>
-                {plan.popular &&
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-0.5 text-xs font-semibold text-primary-foreground">
-                    Most Popular
+            {plans.map(plan => (
+              <Card key={plan.name} className={`relative flex flex-col border-border ${plan.popular ? 'ring-2 ring-primary shadow-lg' : ''}`}>
+                {plan.badge && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <Badge className="bg-primary text-primary-foreground shadow-sm">{plan.badge}</Badge>
                   </div>
-              }
+                )}
                 <CardHeader>
                   <CardTitle className="text-lg">{plan.name}</CardTitle>
-                  <p className="text-sm text-muted-foreground">{plan.desc}</p>
+                  <p className="text-sm text-muted-foreground">{plan.type}</p>
                   <div className="mt-4">
                     <span className="text-4xl font-extrabold">₹{plan.price}</span>
-                    <span className="text-muted-foreground">/month</span>
+                    <span className="text-muted-foreground"> / 28 days</span>
                   </div>
+                  <p className="mt-1.5 text-xs font-medium text-primary">
+                    Only ₹{plan.daily}/day — {plan.anchor}
+                  </p>
                 </CardHeader>
                 <CardContent className="flex-1">
+                  {plan.highlight && (
+                    <p className="mb-3 rounded-lg bg-muted px-3 py-2 text-xs text-muted-foreground leading-relaxed">
+                      {plan.highlight}
+                    </p>
+                  )}
+                  {plan.extra && (
+                    <p className="mb-3 rounded-lg bg-primary/5 border border-primary/10 px-3 py-2 text-xs text-foreground font-medium leading-relaxed">
+                      {plan.extra}
+                    </p>
+                  )}
+                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                    All Growth Features
+                  </p>
                   <ul className="space-y-2.5">
-                    {plan.features.map((f) =>
-                  <li key={f} className="flex items-center gap-2 text-sm">
+                    {allFeatures.map(f => (
+                      <li key={f} className="flex items-center gap-2 text-sm">
                         <Check className="h-4 w-4 shrink-0 text-success" />
                         {f}
                       </li>
-                  )}
+                    ))}
                   </ul>
                 </CardContent>
                 <div className="p-6 pt-0">
-                  <Button asChild className="w-full" variant={plan.popular ? 'default' : 'outline'}>
-                    <Link to="/login">Get Started</Link>
+                  <Button asChild className="w-full gap-2" variant={plan.popular ? 'default' : 'outline'}>
+                    <a href={whatsappLink(plan.name, plan.price)} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="h-4 w-4" />
+                      Get Started
+                    </a>
                   </Button>
                 </div>
               </Card>
-            )}
+            ))}
           </div>
         </div>
       </section>
@@ -170,6 +213,6 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
-    </div>);
-
+    </div>
+  );
 }
