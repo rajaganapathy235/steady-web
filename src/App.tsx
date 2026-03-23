@@ -23,6 +23,7 @@ import ClientCredentials from "./pages/client/ClientCredentials";
 import ClientPayments from "./pages/client/ClientPayments";
 import ClientSupport from "./pages/client/ClientSupport";
 import ClientAnalytics from "./pages/client/ClientAnalytics";
+import ClientDomain from "./pages/client/ClientDomain";
 
 const queryClient = new QueryClient();
 
