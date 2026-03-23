@@ -149,10 +149,10 @@ export default function LandingPage() {
           </div>
           <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
             {plans.map(plan => (
-              <Card key={plan.name} className={`relative flex flex-col border-border ${plan.popular ? 'ring-2 ring-primary shadow-lg' : ''}`}>
+              <Card key={plan.name} className={`relative flex flex-col border-border ${plan.popular ? 'ring-2 ring-chai-gold shadow-lg' : ''}`}>
                 {plan.badge && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-primary text-primary-foreground shadow-sm">{plan.badge}</Badge>
+                    <Badge className="bg-chai-gold text-white shadow-sm">{plan.badge}</Badge>
                   </div>
                 )}
                 <CardHeader>
