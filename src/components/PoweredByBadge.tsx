@@ -1,7 +1,7 @@
 export function PoweredByBadge({ className = '' }: { className?: string }) {
   return (
-    <span className={`text-[10px] font-medium text-chai-gold/80 tracking-wide ${className}`}>
-      Powered by OneCupCode
+    <span className={`text-[9px] font-normal tracking-widest uppercase text-muted-foreground/60 ${className}`}>
+      by OneCupCode
     </span>
   );
 }

@@ -64,10 +64,10 @@ export default function LandingPage() {
       {/* Navbar */}
       <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
-          <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
-            <ChaiClickLogo size={28} />
-            <div className="flex flex-col">
-              <span>ChaiClick</span>
+          <Link to="/" className="flex items-center gap-2.5 font-semibold tracking-tight">
+            <ChaiClickLogo size={32} />
+            <div className="flex flex-col leading-tight">
+              <span className="text-base font-bold text-foreground">ChaiClick</span>
               <PoweredByBadge />
             </div>
           </Link>
@@ -87,8 +87,8 @@ export default function LandingPage() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 py-24 md:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground">
-              <Star className="h-3 w-3 text-warning" />
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-chai-gold/20 bg-chai-gold/5 px-4 py-1.5 text-xs font-medium text-chai-gold">
+              <Star className="h-3 w-3" />
               Trusted by 50+ Indian businesses
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
@@ -126,8 +126,8 @@ export default function LandingPage() {
             {features.map(f => (
               <Card key={f.title} className="group border-border bg-card transition-shadow hover:shadow-md">
                 <CardHeader className="pb-3">
-                  <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-md bg-primary/10">
-                    <f.icon className="h-4 w-4 text-primary" />
+                  <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-md bg-chai-gold/10">
+                    <f.icon className="h-4 w-4 text-chai-gold" />
                   </div>
                   <CardTitle className="text-base font-semibold">{f.title}</CardTitle>
                 </CardHeader>
@@ -149,10 +149,10 @@ export default function LandingPage() {
           </div>
           <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
             {plans.map(plan => (
-              <Card key={plan.name} className={`relative flex flex-col border-border ${plan.popular ? 'ring-2 ring-primary shadow-lg' : ''}`}>
+              <Card key={plan.name} className={`relative flex flex-col border-border ${plan.popular ? 'ring-2 ring-chai-gold shadow-lg' : ''}`}>
                 {plan.badge && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-primary text-primary-foreground shadow-sm">{plan.badge}</Badge>
+                    <Badge className="bg-chai-gold text-white shadow-sm">{plan.badge}</Badge>
                   </div>
                 )}
                 <CardHeader>
@@ -162,7 +162,7 @@ export default function LandingPage() {
                     <span className="text-4xl font-extrabold">₹{plan.price}</span>
                     <span className="text-muted-foreground"> / 28 days</span>
                   </div>
-                  <p className="mt-1.5 text-xs font-medium text-primary">
+                  <p className="mt-1.5 text-xs font-medium text-chai-gold">
                     Only ₹{plan.daily}/day — {plan.anchor}
                   </p>
                 </CardHeader>
@@ -173,7 +173,7 @@ export default function LandingPage() {
                     </p>
                   )}
                   {plan.extra && (
-                    <p className="mb-3 rounded-lg bg-primary/5 border border-primary/10 px-3 py-2 text-xs text-foreground font-medium leading-relaxed">
+                    <p className="mb-3 rounded-lg bg-chai-gold/5 border border-chai-gold/15 px-3 py-2 text-xs text-foreground font-medium leading-relaxed">
                       {plan.extra}
                     </p>
                   )}
@@ -206,10 +206,10 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-border bg-card/50">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8 text-center text-sm text-muted-foreground md:flex-row md:justify-between md:text-left">
-          <div className="flex items-center gap-2 font-semibold text-foreground">
-            <ChaiClickLogo size={20} />
-            <div className="flex flex-col">
-              <span>ChaiClick</span>
+          <div className="flex items-center gap-2.5 font-semibold text-foreground">
+            <ChaiClickLogo size={22} />
+            <div className="flex flex-col leading-tight">
+              <span className="text-sm">ChaiClick</span>
               <PoweredByBadge />
             </div>
           </div>

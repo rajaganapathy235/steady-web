@@ -41,10 +41,10 @@ export default function Login() {
         <ThemeToggle />
       </div>
 
-      <Link to="/" className="mb-8 flex items-center gap-2 text-lg font-semibold text-foreground">
-        <ChaiClickLogo size={28} />
-        <div className="flex flex-col items-start">
-          <span>ChaiClick</span>
+      <Link to="/" className="mb-8 flex items-center gap-2.5 text-lg font-semibold text-foreground">
+        <ChaiClickLogo size={36} />
+        <div className="flex flex-col items-start leading-tight">
+          <span className="text-xl font-bold">ChaiClick</span>
           <PoweredByBadge />
         </div>
       </Link>
