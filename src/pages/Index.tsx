@@ -65,8 +65,11 @@ export default function LandingPage() {
       <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
           <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
-            <Globe className="h-5 w-5" />
-            WaaS-Flow
+            <ChaiClickLogo size={28} />
+            <div className="flex flex-col">
+              <span>ChaiClick</span>
+              <PoweredByBadge />
+            </div>
           </Link>
           <div className="flex items-center gap-2">
             <ThemeToggle />
