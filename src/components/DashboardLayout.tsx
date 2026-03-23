@@ -4,7 +4,7 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import {
   LayoutDashboard, Users, CreditCard, Rocket, FileText, LogOut, Menu, X,
-  BarChart3, Upload, Lock,
+  BarChart3, Upload, Lock, Globe,
 } from 'lucide-react';
 import { ChaiClickLogo } from '@/components/ChaiClickLogo';
 import { PoweredByBadge } from '@/components/PoweredByBadge';
