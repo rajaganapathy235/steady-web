@@ -7,6 +7,8 @@ export interface Client {
   is_suspended: boolean;
   dokploy_app_id: string;
   github_repo: string;
+  server_ip?: string;
+  dns_instructions?: string;
   login_url?: string;
   login_username?: string;
   login_password?: string;
