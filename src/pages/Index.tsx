@@ -162,7 +162,7 @@ export default function LandingPage() {
                     <span className="text-4xl font-extrabold">₹{plan.price}</span>
                     <span className="text-muted-foreground"> / 28 days</span>
                   </div>
-                  <p className="mt-1.5 text-xs font-medium text-primary">
+                  <p className="mt-1.5 text-xs font-medium text-chai-gold">
                     Only ₹{plan.daily}/day — {plan.anchor}
                   </p>
                 </CardHeader>
