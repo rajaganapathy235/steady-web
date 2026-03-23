@@ -35,6 +35,7 @@ const clientNav: NavItem[] = [
   { label: 'Payments', href: '/dashboard/payments', icon: CreditCard },
   { label: 'Support', href: '/dashboard/support', icon: Upload },
   { label: 'Analytics', href: '/dashboard/analytics', icon: BarChart3 },
+  { label: 'Domain', href: '/dashboard/domain', icon: Globe },
 ];
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
