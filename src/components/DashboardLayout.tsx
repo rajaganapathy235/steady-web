@@ -26,6 +26,7 @@ const adminNav: NavItem[] = [
   { label: 'Deploy', href: '/admin/deploy', icon: Rocket },
   { label: 'Deliverables', href: '/admin/deliverables', icon: FileText },
   { label: 'Tickets', href: '/admin/tickets', icon: FileText },
+  { label: 'Domains', href: '/admin/domains', icon: Globe },
 ];
 
 const clientNav: NavItem[] = [
