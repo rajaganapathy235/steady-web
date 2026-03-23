@@ -126,8 +126,8 @@ export default function LandingPage() {
             {features.map(f => (
               <Card key={f.title} className="group border-border bg-card transition-shadow hover:shadow-md">
                 <CardHeader className="pb-3">
-                  <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-md bg-primary/10">
-                    <f.icon className="h-4 w-4 text-primary" />
+                  <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-md bg-chai-gold/10">
+                    <f.icon className="h-4 w-4 text-chai-gold" />
                   </div>
                   <CardTitle className="text-base font-semibold">{f.title}</CardTitle>
                 </CardHeader>
