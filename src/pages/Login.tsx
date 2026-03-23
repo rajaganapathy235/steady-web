@@ -41,9 +41,10 @@ export default function Login() {
       </div>
 
       <Link to="/" className="mb-8 flex items-center gap-2 text-lg font-semibold text-foreground">
-        <Globe className="h-5 w-5" />
-        WaaS-Flow
+        <img src={chaiLogo} alt="ChaiClick" className="h-6 w-6" />
+        ChaiClick
       </Link>
+      <p className="mb-4 -mt-6 text-xs text-muted-foreground">Powered by <strong>OneCupCode</strong></p>
 
       <Card className="w-full max-w-sm border-border">
         <CardHeader className="text-center">

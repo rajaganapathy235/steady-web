@@ -4,8 +4,16 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
-  Globe, Server, Shield, MessageCircle, Headphones, Zap, Check, ArrowRight, Star,
+  Server, Shield, MessageCircle, Headphones, Zap, Check, ArrowRight, Star,
 } from 'lucide-react';
+import chaiLogo from '@/assets/chaiclick-logo.png';
+
+const BrandLogo = ({ size = 'sm' }: { size?: 'sm' | 'md' }) => (
+  <span className="flex items-center gap-2">
+    <img src={chaiLogo} alt="ChaiClick" className={size === 'md' ? 'h-7 w-7' : 'h-5 w-5'} />
+    <span className="font-semibold tracking-tight">ChaiClick</span>
+  </span>
+);
 
 const features = [
   { icon: Server, title: 'Fast VPS Hosting', desc: 'Your site runs on a dedicated VPS with blazing-fast load times and 99.9% uptime.' },
@@ -13,7 +21,7 @@ const features = [
   { icon: MessageCircle, title: 'WhatsApp Integration', desc: 'Built-in WhatsApp chat button so your customers can reach you instantly.' },
   { icon: Headphones, title: '24h Support', desc: 'Our team is always available to handle updates, fixes, and any questions you have.' },
   { icon: Zap, title: 'Lightning Deploys', desc: 'Changes go live within hours. We handle the entire deployment pipeline for you.' },
-  { icon: Globe, title: 'Custom Domain', desc: 'Connect your own domain with DNS management and automatic SSL provisioning.' },
+  { icon: Shield, title: 'Custom Domain', desc: 'Connect your own domain with DNS management and automatic SSL provisioning.' },
 ];
 
 const allFeatures = [
@@ -62,9 +70,8 @@ export default function LandingPage() {
       {/* Navbar */}
       <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
-          <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
-            <Globe className="h-5 w-5" />
-            WaaS-Flow
+          <Link to="/" className="flex items-center gap-2">
+            <BrandLogo />
           </Link>
           <div className="flex items-center gap-2">
             <ThemeToggle />
@@ -83,16 +90,17 @@ export default function LandingPage() {
         <div className="mx-auto max-w-6xl px-4 py-24 md:py-32">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground">
-              <Star className="h-3 w-3 text-warning" />
+              <Star className="h-3 w-3 text-primary" />
               Trusted by 50+ Indian businesses
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
-              We Build, Host & Manage Your Website
-              <span className="block text-muted-foreground">for a Monthly Subscription</span>
+              Your Business Website for the Price of a Chai.
+              <span className="block text-muted-foreground">One Cup of Chai. One World-Class Website.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-              Stop worrying about hosting, updates, and security. We handle everything so you can focus on running your business.
+              Just ₹20/day. Stop worrying about hosting, updates, and security. We handle everything so you can focus on running your business.
             </p>
+            <p className="mt-2 text-xs text-muted-foreground">Powered by <strong>OneCupCode</strong></p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Button asChild size="lg" className="gap-2">
                 <a href="#pricing">
@@ -107,7 +115,7 @@ export default function LandingPage() {
           </div>
         </div>
         {/* Gradient blob */}
-        <div className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-primary/5 blur-3xl" />
+        <div className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
       </section>
 
       {/* Features */}
@@ -184,13 +192,16 @@ export default function LandingPage() {
                     ))}
                   </ul>
                 </CardContent>
-                <div className="p-6 pt-0">
+                <div className="p-6 pt-0 space-y-2">
                   <Button asChild className="w-full gap-2" variant={plan.popular ? 'default' : 'outline'}>
                     <a href={whatsappLink(plan.name, plan.price)} target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="h-4 w-4" />
                       Get Started
                     </a>
                   </Button>
+                  <p className="text-[10px] text-center text-muted-foreground">
+                    Expertly brewed by <strong>OneCupCode</strong> | © 2026 ChaiClick
+                  </p>
                 </div>
               </Card>
             ))}
@@ -202,10 +213,11 @@ export default function LandingPage() {
       <footer className="border-t border-border bg-card/50">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8 text-center text-sm text-muted-foreground md:flex-row md:justify-between md:text-left">
           <div className="flex items-center gap-2 font-semibold text-foreground">
-            <Globe className="h-4 w-4" />
-            WaaS-Flow
+            <img src={chaiLogo} alt="ChaiClick" className="h-4 w-4" />
+            ChaiClick
+            <span className="ml-1 text-[10px] font-normal text-muted-foreground">Powered by OneCupCode</span>
           </div>
-          <p>© {new Date().getFullYear()} WaaS-Flow. All rights reserved.</p>
+          <p>Expertly brewed by OneCupCode | © {new Date().getFullYear()} ChaiClick</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
             <a href="#" className="hover:text-foreground transition-colors">Terms</a>
