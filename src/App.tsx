@@ -15,6 +15,7 @@ import AdminClients from "./pages/admin/AdminClients";
 import AdminPayments from "./pages/admin/AdminPayments";
 import AdminDeploy from "./pages/admin/AdminDeploy";
 import AdminDeliverables from "./pages/admin/AdminDeliverables";
+import AdminDomains from "./pages/admin/AdminDomains";
 import AdminTickets from "./pages/admin/AdminTickets";
 
 import ClientDashboard from "./pages/client/ClientDashboard";
