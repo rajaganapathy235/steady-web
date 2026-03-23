@@ -3,9 +3,11 @@ import { useAuth } from '@/contexts/AuthContext';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import {
-  LayoutDashboard, Users, CreditCard, Rocket, FileText, Settings, LogOut, Globe, Menu, X,
-  Shield, BarChart3, Upload, Lock,
+  LayoutDashboard, Users, CreditCard, Rocket, FileText, LogOut, Menu, X,
+  BarChart3, Upload, Lock,
 } from 'lucide-react';
+import { ChaiClickLogo } from '@/components/ChaiClickLogo';
+import { PoweredByBadge } from '@/components/PoweredByBadge';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import { mockPendingApprovals } from '@/lib/mock-data';
@@ -56,8 +58,11 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
       )}>
         <div className="flex h-14 items-center justify-between border-b border-border px-4">
           <Link to="/" className="flex items-center gap-2 font-semibold text-foreground">
-            <Globe className="h-5 w-5" />
-            <span className="text-sm tracking-tight">WaaS-Flow</span>
+            <ChaiClickLogo size={24} />
+            <div className="flex flex-col">
+              <span className="text-sm tracking-tight">ChaiClick</span>
+              <PoweredByBadge />
+            </div>
           </Link>
           <button onClick={() => setMobileOpen(false)} className="lg:hidden">
             <X className="h-5 w-5 text-muted-foreground" />

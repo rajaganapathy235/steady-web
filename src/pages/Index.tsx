@@ -4,8 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
-  Globe, Server, Shield, MessageCircle, Headphones, Zap, Check, ArrowRight, Star,
+  Server, Shield, MessageCircle, Headphones, Zap, Check, ArrowRight, Star, Globe,
 } from 'lucide-react';
+import { ChaiClickLogo } from '@/components/ChaiClickLogo';
+import { PoweredByBadge } from '@/components/PoweredByBadge';
 
 const features = [
   { icon: Server, title: 'Fast VPS Hosting', desc: 'Your site runs on a dedicated VPS with blazing-fast load times and 99.9% uptime.' },
@@ -63,8 +65,11 @@ export default function LandingPage() {
       <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
           <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
-            <Globe className="h-5 w-5" />
-            WaaS-Flow
+            <ChaiClickLogo size={28} />
+            <div className="flex flex-col">
+              <span>ChaiClick</span>
+              <PoweredByBadge />
+            </div>
           </Link>
           <div className="flex items-center gap-2">
             <ThemeToggle />
@@ -202,10 +207,13 @@ export default function LandingPage() {
       <footer className="border-t border-border bg-card/50">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8 text-center text-sm text-muted-foreground md:flex-row md:justify-between md:text-left">
           <div className="flex items-center gap-2 font-semibold text-foreground">
-            <Globe className="h-4 w-4" />
-            WaaS-Flow
+            <ChaiClickLogo size={20} />
+            <div className="flex flex-col">
+              <span>ChaiClick</span>
+              <PoweredByBadge />
+            </div>
           </div>
-          <p>© {new Date().getFullYear()} WaaS-Flow. All rights reserved.</p>
+          <p>Expertly brewed by OneCupCode | © {new Date().getFullYear()} ChaiClick</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
             <a href="#" className="hover:text-foreground transition-colors">Terms</a>

@@ -5,8 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Globe, AlertCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { ChaiClickLogo } from '@/components/ChaiClickLogo';
+import { PoweredByBadge } from '@/components/PoweredByBadge';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -40,8 +42,11 @@ export default function Login() {
       </div>
 
       <Link to="/" className="mb-8 flex items-center gap-2 text-lg font-semibold text-foreground">
-        <Globe className="h-5 w-5" />
-        WaaS-Flow
+        <ChaiClickLogo size={28} />
+        <div className="flex flex-col items-start">
+          <span>ChaiClick</span>
+          <PoweredByBadge />
+        </div>
       </Link>
 
       <Card className="w-full max-w-sm border-border">
