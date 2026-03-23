@@ -7,6 +7,8 @@ export interface Client {
   is_suspended: boolean;
   dokploy_app_id: string;
   github_repo: string;
+  server_ip?: string;
+  dns_instructions?: string;
   login_url?: string;
   login_username?: string;
   login_password?: string;
@@ -51,6 +53,7 @@ export const mockClients: Client[] = [
     is_suspended: false,
     dokploy_app_id: 'dk_app_001',
     github_repo: 'https://github.com/waas/sharma-electronics',
+    server_ip: '185.158.133.1',
     login_url: 'https://sharmaelectronics.in/wp-admin',
     login_username: 'admin',
     login_password: 'S3cur3P@ss!',

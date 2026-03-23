@@ -4,7 +4,7 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import {
   LayoutDashboard, Users, CreditCard, Rocket, FileText, LogOut, Menu, X,
-  BarChart3, Upload, Lock,
+  BarChart3, Upload, Lock, Globe,
 } from 'lucide-react';
 import { ChaiClickLogo } from '@/components/ChaiClickLogo';
 import { PoweredByBadge } from '@/components/PoweredByBadge';
@@ -26,6 +26,7 @@ const adminNav: NavItem[] = [
   { label: 'Deploy', href: '/admin/deploy', icon: Rocket },
   { label: 'Deliverables', href: '/admin/deliverables', icon: FileText },
   { label: 'Tickets', href: '/admin/tickets', icon: FileText },
+  { label: 'Domains', href: '/admin/domains', icon: Globe },
 ];
 
 const clientNav: NavItem[] = [
@@ -34,6 +35,7 @@ const clientNav: NavItem[] = [
   { label: 'Payments', href: '/dashboard/payments', icon: CreditCard },
   { label: 'Support', href: '/dashboard/support', icon: Upload },
   { label: 'Analytics', href: '/dashboard/analytics', icon: BarChart3 },
+  { label: 'Domain', href: '/dashboard/domain', icon: Globe },
 ];
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {

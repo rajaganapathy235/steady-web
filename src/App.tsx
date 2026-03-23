@@ -15,6 +15,7 @@ import AdminClients from "./pages/admin/AdminClients";
 import AdminPayments from "./pages/admin/AdminPayments";
 import AdminDeploy from "./pages/admin/AdminDeploy";
 import AdminDeliverables from "./pages/admin/AdminDeliverables";
+import AdminDomains from "./pages/admin/AdminDomains";
 import AdminTickets from "./pages/admin/AdminTickets";
 
 import ClientDashboard from "./pages/client/ClientDashboard";
@@ -22,6 +23,7 @@ import ClientCredentials from "./pages/client/ClientCredentials";
 import ClientPayments from "./pages/client/ClientPayments";
 import ClientSupport from "./pages/client/ClientSupport";
 import ClientAnalytics from "./pages/client/ClientAnalytics";
+import ClientDomain from "./pages/client/ClientDomain";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +45,7 @@ const App = () => (
             <Route path="/admin/deploy" element={<ProtectedRoute role="admin"><AdminDeploy /></ProtectedRoute>} />
             <Route path="/admin/deliverables" element={<ProtectedRoute role="admin"><AdminDeliverables /></ProtectedRoute>} />
             <Route path="/admin/tickets" element={<ProtectedRoute role="admin"><AdminTickets /></ProtectedRoute>} />
+            <Route path="/admin/domains" element={<ProtectedRoute role="admin"><AdminDomains /></ProtectedRoute>} />
 
             {/* Client Routes */}
             <Route path="/dashboard" element={<ProtectedRoute role="client"><ClientDashboard /></ProtectedRoute>} />
@@ -50,6 +53,7 @@ const App = () => (
             <Route path="/dashboard/payments" element={<ProtectedRoute role="client"><ClientPayments /></ProtectedRoute>} />
             <Route path="/dashboard/support" element={<ProtectedRoute role="client"><ClientSupport /></ProtectedRoute>} />
             <Route path="/dashboard/analytics" element={<ProtectedRoute role="client"><ClientAnalytics /></ProtectedRoute>} />
+            <Route path="/dashboard/domain" element={<ProtectedRoute role="client"><ClientDomain /></ProtectedRoute>} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
