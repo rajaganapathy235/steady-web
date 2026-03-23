@@ -3,9 +3,11 @@ import { useAuth } from '@/contexts/AuthContext';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import {
-  LayoutDashboard, Users, CreditCard, Rocket, FileText, Settings, LogOut, Globe, Menu, X,
-  Shield, BarChart3, Upload, Lock,
+  LayoutDashboard, Users, CreditCard, Rocket, FileText, LogOut, Menu, X,
+  BarChart3, Upload, Lock,
 } from 'lucide-react';
+import { ChaiClickLogo } from '@/components/ChaiClickLogo';
+import { PoweredByBadge } from '@/components/PoweredByBadge';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import { mockPendingApprovals } from '@/lib/mock-data';
