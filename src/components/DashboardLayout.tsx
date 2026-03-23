@@ -3,11 +3,12 @@ import { useAuth } from '@/contexts/AuthContext';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import {
-  LayoutDashboard, Users, CreditCard, Rocket, FileText, Settings, LogOut, Globe, Menu, X,
+  LayoutDashboard, Users, CreditCard, Rocket, FileText, Settings, LogOut, Menu, X,
   Shield, BarChart3, Upload, Lock,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
+import chaiLogo from '@/assets/chaiclick-logo.png';
 import { mockPendingApprovals } from '@/lib/mock-data';
 
 interface NavItem {
