@@ -53,6 +53,7 @@ const App = () => (
             <Route path="/dashboard/payments" element={<ProtectedRoute role="client"><ClientPayments /></ProtectedRoute>} />
             <Route path="/dashboard/support" element={<ProtectedRoute role="client"><ClientSupport /></ProtectedRoute>} />
             <Route path="/dashboard/analytics" element={<ProtectedRoute role="client"><ClientAnalytics /></ProtectedRoute>} />
+            <Route path="/dashboard/domain" element={<ProtectedRoute role="client"><ClientDomain /></ProtectedRoute>} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
