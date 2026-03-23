@@ -23,8 +23,8 @@ export default defineConfig(({ mode }) => ({
         navigateFallbackDenylist: [/^\/~oauth/],
       },
       manifest: {
-        name: "WaaS-Flow — Website as a Service",
-        short_name: "WaaS-Flow",
+        name: "ChaiClick — Website as a Service",
+        short_name: "ChaiClick",
         description: "We Build, Host & Manage Your Business Website for a Monthly Subscription.",
         theme_color: "#0f172a",
         background_color: "#f8fafc",

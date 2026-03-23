@@ -207,10 +207,13 @@ export default function LandingPage() {
       <footer className="border-t border-border bg-card/50">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8 text-center text-sm text-muted-foreground md:flex-row md:justify-between md:text-left">
           <div className="flex items-center gap-2 font-semibold text-foreground">
-            <Globe className="h-4 w-4" />
-            WaaS-Flow
+            <ChaiClickLogo size={20} />
+            <div className="flex flex-col">
+              <span>ChaiClick</span>
+              <PoweredByBadge />
+            </div>
           </div>
-          <p>© {new Date().getFullYear()} WaaS-Flow. All rights reserved.</p>
+          <p>Expertly brewed by OneCupCode | © {new Date().getFullYear()} ChaiClick</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
             <a href="#" className="hover:text-foreground transition-colors">Terms</a>
