@@ -87,8 +87,8 @@ export default function LandingPage() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 py-24 md:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium text-muted-foreground">
-              <Star className="h-3 w-3 text-warning" />
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-chai-gold/20 bg-chai-gold/5 px-4 py-1.5 text-xs font-medium text-chai-gold">
+              <Star className="h-3 w-3" />
               Trusted by 50+ Indian businesses
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
