@@ -64,10 +64,10 @@ export default function LandingPage() {
       {/* Navbar */}
       <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
-          <Link to="/" className="flex items-center gap-2 font-semibold tracking-tight">
-            <ChaiClickLogo size={28} />
-            <div className="flex flex-col">
-              <span>ChaiClick</span>
+          <Link to="/" className="flex items-center gap-2.5 font-semibold tracking-tight">
+            <ChaiClickLogo size={32} />
+            <div className="flex flex-col leading-tight">
+              <span className="text-base font-bold text-foreground">ChaiClick</span>
               <PoweredByBadge />
             </div>
           </Link>
