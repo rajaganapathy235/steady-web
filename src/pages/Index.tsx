@@ -173,7 +173,7 @@ export default function LandingPage() {
                     </p>
                   )}
                   {plan.extra && (
-                    <p className="mb-3 rounded-lg bg-primary/5 border border-primary/10 px-3 py-2 text-xs text-foreground font-medium leading-relaxed">
+                    <p className="mb-3 rounded-lg bg-chai-gold/5 border border-chai-gold/15 px-3 py-2 text-xs text-foreground font-medium leading-relaxed">
                       {plan.extra}
                     </p>
                   )}
