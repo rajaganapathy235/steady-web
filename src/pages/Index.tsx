@@ -206,10 +206,10 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-border bg-card/50">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8 text-center text-sm text-muted-foreground md:flex-row md:justify-between md:text-left">
-          <div className="flex items-center gap-2 font-semibold text-foreground">
-            <ChaiClickLogo size={20} />
-            <div className="flex flex-col">
-              <span>ChaiClick</span>
+          <div className="flex items-center gap-2.5 font-semibold text-foreground">
+            <ChaiClickLogo size={22} />
+            <div className="flex flex-col leading-tight">
+              <span className="text-sm">ChaiClick</span>
               <PoweredByBadge />
             </div>
           </div>

@@ -57,10 +57,10 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
         mobileOpen ? 'translate-x-0' : '-translate-x-full'
       )}>
         <div className="flex h-14 items-center justify-between border-b border-border px-4">
-          <Link to="/" className="flex items-center gap-2 font-semibold text-foreground">
-            <ChaiClickLogo size={24} />
-            <div className="flex flex-col">
-              <span className="text-sm tracking-tight">ChaiClick</span>
+          <Link to="/" className="flex items-center gap-2.5 font-semibold text-foreground">
+            <ChaiClickLogo size={26} />
+            <div className="flex flex-col leading-tight">
+              <span className="text-sm font-bold tracking-tight">ChaiClick</span>
               <PoweredByBadge />
             </div>
           </Link>
