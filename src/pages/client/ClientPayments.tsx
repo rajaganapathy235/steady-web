@@ -11,7 +11,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Upload, QrCode, Copy, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
-const UPI_ID = 'chaiclick@upi';
+const UPI_ID = 'waasflow@upi';
 
 export default function ClientPayments() {
   const { user } = useAuth();
